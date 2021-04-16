@@ -1,4 +1,6 @@
 ﻿using System;
+using GradeBook.GradeBooks;
+using GradeBook.UserInterfaces;
 
 namespace GradeBook
 {
@@ -6,7 +8,17 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("#=======================#");
+            Console.WriteLine("# Welcome to GradeBook! #");
+            Console.WriteLine("#=======================#");
+
+            StartingUserInterface.CommandLoop();
+
+            Console.WriteLine("Thank you for using GradeBook!");
+            Console.WriteLine("Have a nice day!");
+            Console.Read();
         }
+
     }
 }
+
