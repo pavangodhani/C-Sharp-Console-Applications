@@ -1,0 +1,16 @@
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\GradeBook.exe
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\GradeBook.deps.json
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\GradeBook.runtimeconfig.json
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\GradeBook.runtimeconfig.dev.json
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\GradeBook.dll
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\ref\GradeBook.dll
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\GradeBook.pdb
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.csprojAssemblyReference.cache
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.GeneratedMSBuildEditorConfig.editorconfig
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.AssemblyInfoInputs.cache
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.AssemblyInfo.cs
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.csproj.CoreCompileInputs.cache
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.dll
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\ref\GradeBook.dll
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.pdb
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.genruntimeconfig.cache

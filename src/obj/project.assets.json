@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\KLing\\Project\\GradeBookApplication\\GradeBookApplication.csproj",
-      "projectName": "GradeBookApplication",
-      "projectPath": "E:\\KLing\\Project\\GradeBookApplication\\GradeBookApplication.csproj",
+      "projectUniqueName": "E:\\KLing\\Project\\GradeBookApplication\\src\\GradeBook.csproj",
+      "projectName": "GradeBook",
+      "projectPath": "E:\\KLing\\Project\\GradeBookApplication\\src\\GradeBook.csproj",
       "packagesPath": "C:\\Users\\pavan\\.nuget\\packages\\",
-      "outputPath": "E:\\KLing\\Project\\GradeBookApplication\\obj\\",
+      "outputPath": "E:\\KLing\\Project\\GradeBookApplication\\src\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pavan\\AppData\\Roaming\\NuGet\\NuGet.Config",

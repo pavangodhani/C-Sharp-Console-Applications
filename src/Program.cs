@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GradeBookApplication
+namespace GradeBook
 {
     class Program
     {

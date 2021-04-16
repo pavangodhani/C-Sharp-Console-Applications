@@ -1,9 +1,14 @@
 using GradeBook.Enums;
 
-namespace GardeBook
+namespace GradeBook
 {
-    class BaseGardeBook
+    public class BaseGardeBook
     {
+        public BaseGardeBook(string name)
+        {
+
+        }
+
         public GradeBookType Type
         {
             get;
