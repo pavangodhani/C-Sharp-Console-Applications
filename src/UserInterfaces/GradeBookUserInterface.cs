@@ -42,10 +42,27 @@ namespace GradeBook.UserInterfaces
             {
                 Quit = true;
             }
+            else if (command.StartsWith("addgrade"))
+            {
+                AddGradeCommand(command);
+            }
+            else if (command.StartsWith("removegrade"))
+            {
+                RemoveGradeCommand(command);
+            }
             else if (command.StartsWith("add"))
             {
                 AddStudentCommand(command);
             }
+            else if (command.StartsWith("remove"))
+            {
+                RemoveStudentCommand(command);
+            }
+            else if (command == "list")
+            {
+                ListCommand();
+            }
+
         }
 
         private static void AddStudentCommand(string command)
@@ -84,14 +101,57 @@ namespace GradeBook.UserInterfaces
         public static void RemoveStudentCommand(string command)
         {
             var parts = command.Split(' ');
+
             if (parts.Length != 2)
             {
                 Console.WriteLine("Command not valid, Remove requires a name.");
                 return;
             }
-            var name = parts[1];
-            GradeBook.RemoveStudent(name);
-            Console.WriteLine("Removed {0} from the gradebook.", name);
+
+            var studentName = parts[1];
+
+            GradeBook.RemoveStudent(studentName);
+        }
+
+        public static void ListCommand()
+        {
+            GradeBook.ListStudents();
+        }
+
+        public static void AddGradeCommand(string command)
+        {
+            var parts = command.Split(' ');
+
+            if (parts.Length != 3)
+            {
+                Console.WriteLine("Command not valid, AddGrade requires a student name and score.");
+                return;
+            }
+
+            var studentName = parts[1];
+            var grade = Double.Parse(parts[2]);
+
+            GradeBook.AddGrade(studentName, grade);
+
+            Console.WriteLine($"Added a grade of {grade} to {studentName}'s grades");
+        }
+
+        public static void RemoveGradeCommand(string command)
+        {
+            var parts = command.Split(' ');
+
+            if (parts.Length != 3)
+            {
+                Console.WriteLine("Command not valid, RemoveGrade requires a name and score.");
+                return;
+            }
+
+            var studentName = parts[1];
+            var grade = Double.Parse(parts[2]);
+
+            GradeBook.RemoveGrade(studentName, grade);
+
+            Console.WriteLine($"Removed a score of {grade} from {studentName}'s grades");
         }
 
         public static void HelpCommand()
@@ -116,14 +176,16 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine("International - Students who's legal residence is not in the same country as the school.");
 
             Console.WriteLine();
+            Console.WriteLine("Remove 'Name' - Removes the student with the provided name.");
+
+            Console.WriteLine();
             Console.WriteLine("List - Lists all students.");
             Console.WriteLine();
 
             Console.WriteLine("AddGrade 'Name' 'Score' - Adds a new grade to a student with the matching name of the provided score.");
             Console.WriteLine();
             Console.WriteLine("RemoveGrade 'Name' 'Score' - Removes a grade to a student with the matching name and score.");
-            Console.WriteLine();
-            Console.WriteLine("Remove 'Name' - Removes the student with the provided name.");
+
             Console.WriteLine();
             Console.WriteLine("Statistics 'Name' - Gets statistics for the specified student.");
             Console.WriteLine();
