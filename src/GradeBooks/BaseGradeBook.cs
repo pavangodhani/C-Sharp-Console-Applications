@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using GradeBook.Enums;
 using GradeBook.Students;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GradeBook.GradeBooks
 {
@@ -207,5 +210,88 @@ namespace GradeBook.GradeBooks
             if (dualEnrolledPoints != 0)
                 Console.WriteLine("Average for only duel enrolled students is " + (dualEnrolledPoints / Students.Where(e => e.Type == StudentType.DualEnrolled).Count()));
         }
+
+        //---------------------------------------------------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        public void Save()
+        {
+            using (var file = new FileStream(Name + ".gdbk", FileMode.Create, FileAccess.Write))
+            {
+                using (var writer = new StreamWriter(file))
+                {
+                    var json = JsonConvert.SerializeObject(this);
+                    writer.Write(json);
+                }
+            }
+        }
+
+        public static BaseGradeBook Load(string name)
+        {
+            if (!File.Exists(name + ".gdbk"))
+            {
+                Console.WriteLine("Gradebook could not be found.");
+                return null;
+            }
+
+            using (var file = new FileStream(name + ".gdbk", FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = new StreamReader(file))
+                {
+                    var json = reader.ReadToEnd();
+                    return ConvertToGradeBook(json);
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Converts json to the appropriate grade book type.
+        ///     Note: This method contains code that is not recommended practice.
+        ///     This has been used as a compromise to avoid adding additional complexity to the learner.
+        /// </summary>
+        /// <returns>The to grade book.</returns>
+        /// <param name="json">Json.</param>
+        public static dynamic ConvertToGradeBook(string json)
+        {
+            // Get GradeBookType from the GradeBook.Enums namespace
+            var gradebookEnum = (from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                                 from type in assembly.GetTypes()
+                                 where type.FullName == "GradeBook.Enums.GradeBookType"
+                                 select type).FirstOrDefault();
+
+            var jobject = JsonConvert.DeserializeObject<JObject>(json);
+            var gradeBookType = jobject.Property("Type")?.Value?.ToString();
+
+            // Check if StandardGradeBook exists
+            if ((from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                 from type in assembly.GetTypes()
+                 where type.FullName == "GradeBook.GradeBooks.StandardGradeBook"
+                 select type).FirstOrDefault() == null)
+                gradeBookType = "Base";
+            else
+            {
+                if (string.IsNullOrEmpty(gradeBookType))
+                    gradeBookType = "Standard";
+                else
+                    gradeBookType = Enum.GetName(gradebookEnum, int.Parse(gradeBookType));
+            }
+
+            // Get GradeBook from the GradeBook.GradeBooks namespace
+            var gradebook = (from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                             from type in assembly.GetTypes()
+                             where type.FullName == "GradeBook.GradeBooks." + gradeBookType + "GradeBook"
+                             select type).FirstOrDefault();
+
+
+            //protection code
+            if (gradebook == null)
+                gradebook = (from assembly in AppDomain.CurrentDomain.GetAssemblies()
+                             from type in assembly.GetTypes()
+                             where type.FullName == "GradeBook.GradeBooks.StandardGradeBook"
+                             select type).FirstOrDefault();
+
+            return JsonConvert.DeserializeObject(json, gradebook);
+        }
+
     }
 }

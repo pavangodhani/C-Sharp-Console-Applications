@@ -14,3 +14,5 @@ E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.dll
 E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\ref\GradeBook.dll
 E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.pdb
 E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.genruntimeconfig.cache
+E:\KLing\Project\GradeBookApplication\src\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\KLing\Project\GradeBookApplication\src\obj\Debug\net5.0\GradeBook.csproj.CopyComplete

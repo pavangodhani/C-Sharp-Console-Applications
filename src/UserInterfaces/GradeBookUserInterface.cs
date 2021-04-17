@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using GradeBook.Enums;
 using GradeBook.GradeBooks;
 using GradeBook.Students;
@@ -70,8 +71,14 @@ namespace GradeBook.UserInterfaces
             {
                 StudentStatisticsCommand(command);
             }
-
-
+            else if(command == "save")
+            {
+                SaveCommand();
+            }
+            else
+            {
+                Console.WriteLine($"{command} was not recognized, please try again.");
+            }
         }
 
         private static void AddStudentCommand(string command)
@@ -181,6 +188,13 @@ namespace GradeBook.UserInterfaces
         public static void StatisticsCommand() //--=-==---
         {
             GradeBook.CalculateStatistics();
+        }
+
+
+        public static void SaveCommand()
+        {
+            GradeBook.Save();
+            Console.WriteLine("{0} has been saved.", GradeBook.Name);
         }
 
         public static void HelpCommand()

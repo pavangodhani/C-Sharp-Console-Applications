@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7OhtapCatGqr5Oizg4m2RHGHbblUaS9QsLpFXxz6Ba2JEl64deYSogWhsn6adN6Qq/hLTsWxaOnX809GjNzuLA==",
+  "dgSpecHash": "uu4FCyd8UF75C0f1UEzn/rPWdd5a4FQwmKopG2XhzGSWiZ2nvgQPb4rY+dS6sMaFqyUh6Q6F3ngsYQ0Scdeshw==",
   "success": true,
   "projectFilePath": "E:\\KLing\\Project\\GradeBookApplication\\src\\GradeBook.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pavan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

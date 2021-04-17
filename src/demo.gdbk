@@ -1,0 +1,1 @@
+{"Name":"demo","Students":[{"Name":"pavan","Type":1,"Enrollment":1,"Grades":[100.0,95.0,55.0],"AverageGrade":83.33333333333333,"LetterGrade":"\u0000","GPA":0.0},{"Name":"sagar","Type":0,"Enrollment":0,"Grades":[100.0],"AverageGrade":100.0,"LetterGrade":"\u0000","GPA":0.0}]}

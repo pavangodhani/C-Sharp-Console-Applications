@@ -27,9 +27,13 @@ namespace GradeBook.UserInterfaces
             {
                 HelpCommand(command);
             }
-            else if(command == "quit")
+            else if (command == "quit")
             {
                 Quit = true;
+            }
+            else if (command.StartsWith("load"))
+            {
+                LoadCommand(command);
             }
         }
 
@@ -60,6 +64,27 @@ namespace GradeBook.UserInterfaces
 
             BaseGradeBook gradeBook = new BaseGradeBook(name);
             System.Console.WriteLine($"Created Grade Book {name}");
+
+            GradeBookUserInterface.CommandLoop(gradeBook);
+        }
+        
+        //--------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------------
+        
+        public static void LoadCommand(string command)
+        {
+            var parts = command.Split(' ');
+            if (parts.Length != 2)
+            {
+                Console.WriteLine("Command not valid, Load requires a name.");
+                return;
+            }
+            var name = parts[1];
+            var gradeBook = BaseGradeBook.Load(name);
+
+            if (gradeBook == null)
+                return;
 
             GradeBookUserInterface.CommandLoop(gradeBook);
         }
