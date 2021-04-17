@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using GradeBook.Enums;
 using GradeBoook.Student;
 
-namespace GradeBook
+namespace GradeBook.GradeBooks
 {
-    public class BaseGardeBook
+    public class BaseGradeBook
     {
         public string Name { get; set; }
 
         public List<Student> Students { get; set; }
 
-        public BaseGardeBook(string name)
+        public BaseGradeBook(string name)
         {
             Name = name;
             Students = new List<Student>();

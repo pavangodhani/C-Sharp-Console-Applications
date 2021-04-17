@@ -1,4 +1,5 @@
 ﻿using System;
+using GradeBook.GradeBooks;
 
 namespace GradeBook.UserInterfaces
 {
@@ -57,8 +58,10 @@ namespace GradeBook.UserInterfaces
 
             var name = parts[1];
 
-            BaseGardeBook gardeBook = new BaseGardeBook(name);
+            BaseGradeBook gradeBook = new BaseGradeBook(name);
             System.Console.WriteLine($"Created Grade Book {name}");
+
+            GradeBookUserInterface.CommandLoop(gradeBook);
         }
     }
 }
