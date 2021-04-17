@@ -81,124 +81,44 @@ namespace GradeBook.UserInterfaces
             Console.WriteLine($"Added {studentName} to the gradebook.");
         }
 
-        // public static void SaveCommand()
-        // {
-        //     GradeBook.Save();
-        //     Console.WriteLine("{0} has been saved.", GradeBook.Name);
-        // }
-
-        // public static void AddGradeCommand(string command)
-        // {
-        //     var parts = command.Split(' ');
-        //     if (parts.Length != 3)
-        //     {
-        //         Console.WriteLine("Command not valid, AddGrade requires a name and score.");
-        //         return;
-        //     }
-        //     var name = parts[1];
-        //     var score = Double.Parse(parts[2]);
-        //     GradeBook.AddGrade(name, score);
-        //     Console.WriteLine("Added a score of {0} to {1}'s grades", score, name);
-        // }
-
-        // public static void RemoveGradeCommand(string command)
-        // {
-        //     var parts = command.Split(' ');
-        //     if (parts.Length != 3)
-        //     {
-        //         Console.WriteLine("Command not valid, RemoveGrade requires a name and score.");
-        //         return;
-        //     }
-        //     var name = parts[1];
-        //     var score = Double.Parse(parts[2]);
-        //     GradeBook.RemoveGrade(name, score);
-        //     Console.WriteLine("Removed a score of {0} from {1}'s grades", score, name);
-        // }
-
-        // public static void AddStudentCommand(string command)
-        // {
-        //     var parts = command.Split(' ');
-        //     if (parts.Length != 4)
-        //     {
-        //         Console.WriteLine("Command not valid, Add requires a name, student type, enrollment type.");
-        //         return;
-        //     }
-        //     var name = parts[1];
-
-        //     StudentType studentType;
-        //     if (!Enum.TryParse(parts[2], true, out studentType))
-        //     {
-        //         Console.WriteLine("{0} is not a valid student type, try again.", parts[2]);
-        //         return;
-        //     }
-
-        //     EnrollmentType enrollmentType;
-        //     if (!Enum.TryParse(parts[3], true, out enrollmentType))
-        //     {
-        //         Console.WriteLine("{0} is not a valid enrollment type, try again.", parts[3]);
-        //         return;
-        //     }
-
-        //     var student = new Student(name, studentType, enrollmentType);
-        //     GradeBook.AddStudent(student);
-        //     Console.WriteLine("Added {0} to the gradebook.", name);
-        // }
-
-        // public static void RemoveStudentCommand(string command)
-        // {
-        //     var parts = command.Split(' ');
-        //     if (parts.Length != 2)
-        //     {
-        //         Console.WriteLine("Command not valid, Remove requires a name.");
-        //         return;
-        //     }
-        //     var name = parts[1];
-        //     GradeBook.RemoveStudent(name);
-        //     Console.WriteLine("Removed {0} from the gradebook.", name);
-        // }
-
-        // public static void ListCommand()
-        // {
-        //     GradeBook.ListStudents();
-        // }
-
-        // public static void StatisticsCommand()
-        // {
-        //     GradeBook.CalculateStatistics();
-        // }
-
-        // public static void StudentStatisticsCommand(string command)
-        // {
-        //     var parts = command.Split(' ');
-        //     if (parts.Length != 2)
-        //     {
-        //         Console.WriteLine("Command not valid, Requires Name or All.");
-        //         return;
-        //     }
-        //     var name = parts[1];
-        //     GradeBook.CalculateStudentStatistics(name);
-        // }
+        public static void RemoveStudentCommand(string command)
+        {
+            var parts = command.Split(' ');
+            if (parts.Length != 2)
+            {
+                Console.WriteLine("Command not valid, Remove requires a name.");
+                return;
+            }
+            var name = parts[1];
+            GradeBook.RemoveStudent(name);
+            Console.WriteLine("Removed {0} from the gradebook.", name);
+        }
 
         public static void HelpCommand()
         {
             Console.WriteLine();
             Console.WriteLine("While a gradebook is open you can use the following commands:");
+
             Console.WriteLine();
             Console.WriteLine("Add 'Name' 'Student Type' 'Enrollment Type' - Adds a new student to the gradebook with the provided name, type of student, and type of enrollment.");
+
             Console.WriteLine();
             Console.WriteLine("Accepted Student Types:");
             Console.WriteLine("Standard - Student not enrolled in Honors classes or Dual Enrolled.");
             Console.WriteLine("Honors - Students enrolled in Honors classes and not Dual Enrolled.");
             Console.WriteLine("DualEnrolled - Students who are Duel Enrolled.");
+
             Console.WriteLine();
             Console.WriteLine("Accepted Enrollment Types:");
             Console.WriteLine("Campus - Students who are in the same district as the school.");
             Console.WriteLine("State - Students who's legal residence is outside the school's district, but is in the same state as the school.");
             Console.WriteLine("National - Students who's legal residence is not in the same state as the school, but is in the same country as the school.");
             Console.WriteLine("International - Students who's legal residence is not in the same country as the school.");
+
             Console.WriteLine();
             Console.WriteLine("List - Lists all students.");
             Console.WriteLine();
+
             Console.WriteLine("AddGrade 'Name' 'Score' - Adds a new grade to a student with the matching name of the provided score.");
             Console.WriteLine();
             Console.WriteLine("RemoveGrade 'Name' 'Score' - Removes a grade to a student with the matching name and score.");
