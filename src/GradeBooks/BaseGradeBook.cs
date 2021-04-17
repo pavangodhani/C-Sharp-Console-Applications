@@ -16,5 +16,9 @@ namespace GradeBook
             Students = new List<Student>();
         }
 
+        public void AddStudent(Student student)
+        {
+            Students.Add(student);
+        }
     }
 }

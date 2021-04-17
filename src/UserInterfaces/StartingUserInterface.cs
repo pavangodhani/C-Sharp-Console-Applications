@@ -58,7 +58,7 @@ namespace GradeBook.UserInterfaces
             var name = parts[1];
 
             BaseGardeBook gardeBook = new BaseGardeBook(name);
-
+            System.Console.WriteLine($"Created Grade Book {name}");
         }
     }
 }
