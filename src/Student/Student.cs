@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GradeBook.Enums;
 
-namespace GradeBoook.Student
+namespace GradeBook.Students
 {
     public class Student
     {
@@ -12,14 +12,14 @@ namespace GradeBoook.Student
         public StudentType Type { get; set; }
         public EnrollmentType Enrollment { get; set; }
         public List<double> Grades { get; set; }
-        public double AverageGarde
+        public double AverageGrade
         {
             get
             {
                 return Grades.Average();
             }
         }
-        public char LetterGarde { get; set; }
+        public char LetterGrade { get; set; }
         public double GPA { get; set; }
 
         public Student(string studentName, StudentType studentType, EnrollmentType studentEnrollmentType)

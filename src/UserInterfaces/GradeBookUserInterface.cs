@@ -1,7 +1,7 @@
 ﻿using System;
 using GradeBook.Enums;
 using GradeBook.GradeBooks;
-using GradeBoook.Student;
+using GradeBook.Students;
 
 namespace GradeBook.UserInterfaces
 {
@@ -62,8 +62,15 @@ namespace GradeBook.UserInterfaces
             {
                 ListCommand();
             }
+            else if (command == "statistics all")
+            {
+                StatisticsCommand();
+            }
             else if (command.StartsWith("statistics"))
+            {
                 StudentStatisticsCommand(command);
+            }
+
 
         }
 
@@ -169,6 +176,11 @@ namespace GradeBook.UserInterfaces
             var studentName = parts[1];
 
             GradeBook.CalculateStudentStatistics(studentName);
+        }
+
+        public static void StatisticsCommand() //--=-==---
+        {
+            GradeBook.CalculateStatistics();
         }
 
         public static void HelpCommand()
