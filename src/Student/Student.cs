@@ -30,7 +30,17 @@ namespace GradeBoook.Student
 
         public void RemoveGrade(double grade)
         {
-            Grades.Remove(grade);
+            if (Grades.Contains(grade))
+            {
+                Grades.Remove(grade);
+
+                Console.WriteLine($"Removed a score of {grade} from {Name}'s grades");
+            }
+            else
+            {
+                System.Console.WriteLine($"Garde {grade} is not prasent in {Name}'s grades");
+            }
+
         }
     }
 }

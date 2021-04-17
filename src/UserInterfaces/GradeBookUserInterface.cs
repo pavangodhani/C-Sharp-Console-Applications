@@ -62,6 +62,8 @@ namespace GradeBook.UserInterfaces
             {
                 ListCommand();
             }
+            else if (command.StartsWith("statistics"))
+                StudentStatisticsCommand(command);
 
         }
 
@@ -151,7 +153,21 @@ namespace GradeBook.UserInterfaces
 
             GradeBook.RemoveGrade(studentName, grade);
 
-            Console.WriteLine($"Removed a score of {grade} from {studentName}'s grades");
+        }
+
+        public static void StudentStatisticsCommand(string command)
+        {
+            var parts = command.Split(' ');
+
+            if (parts.Length != 2)
+            {
+                Console.WriteLine("Command not valid, Requires Name or All.");
+                return;
+            }
+
+            var studentName = parts[1];
+
+            GradeBook.CalculateStudentStatistics(studentName);
         }
 
         public static void HelpCommand()

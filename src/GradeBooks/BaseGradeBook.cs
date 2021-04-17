@@ -78,10 +78,23 @@ namespace GradeBook.GradeBooks
 
             if (student == null)
             {
-                Console.WriteLine("student {0} was not found, try again.", studentName);
+                Console.WriteLine($"student {studentName} was not found, try again.");
                 return;
             }
+
             student.RemoveGrade(score);
+        }
+
+        public virtual void CalculateStudentStatistics(string studentName)
+        {
+            var student = Students.FirstOrDefault(e => e.Name == studentName);
+
+            Console.WriteLine();
+            Console.WriteLine("Grades:");
+            foreach (var grade in student.Grades)
+            {
+                Console.WriteLine(grade);
+            }
         }
     }
 }
