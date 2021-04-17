@@ -161,7 +161,8 @@ namespace GradeBook.UserInterfaces
 
             if (parts.Length != 2)
             {
-                Console.WriteLine("Command not valid, Requires Name or All.");
+                Console.WriteLine("Command not valid, Requires statistics 'student name' or 'All'.");
+
                 return;
             }
 
@@ -196,18 +197,22 @@ namespace GradeBook.UserInterfaces
 
             Console.WriteLine();
             Console.WriteLine("List - Lists all students.");
-            Console.WriteLine();
 
+            Console.WriteLine();
             Console.WriteLine("AddGrade 'Name' 'Score' - Adds a new grade to a student with the matching name of the provided score.");
+
             Console.WriteLine();
             Console.WriteLine("RemoveGrade 'Name' 'Score' - Removes a grade to a student with the matching name and score.");
 
             Console.WriteLine();
             Console.WriteLine("Statistics 'Name' - Gets statistics for the specified student.");
+
             Console.WriteLine();
             Console.WriteLine("Statistics All - Gets general statistics for the entire gradebook.");
+
             Console.WriteLine();
             Console.WriteLine("Close - closes the gradebook and takes you back to the starting command options.");
+
             Console.WriteLine();
             Console.WriteLine("Save - saves the gradebook to the hard drive for later use.");
         }

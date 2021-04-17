@@ -69,7 +69,7 @@ namespace GradeBook.GradeBooks
             student.AddGrade(grade);
         }
 
-        public void RemoveGrade(string studentName, double score)
+        public void RemoveGrade(string studentName, double grade)
         {
             if (string.IsNullOrEmpty(studentName))
                 throw new ArgumentException("A Name is required to remove a grade from a student.");
@@ -79,22 +79,66 @@ namespace GradeBook.GradeBooks
             if (student == null)
             {
                 Console.WriteLine($"student {studentName} was not found, try again.");
+
                 return;
             }
 
-            student.RemoveGrade(score);
+            student.RemoveGrade(grade);
         }
 
-        public virtual void CalculateStudentStatistics(string studentName)
+        public void CalculateStudentStatistics(string studentName)
         {
             var student = Students.FirstOrDefault(e => e.Name == studentName);
 
+            if (student == null)
+            {
+                System.Console.WriteLine($"{studentName} not present in {Name} GradeBook");
+
+                return;
+            }
+
+            student.LetterGarde = GetLetterGrade(student.AverageGarde);
+            student.GPA = GetGPA(student.LetterGarde);
+
             Console.WriteLine();
-            Console.WriteLine("Grades:");
+            System.Console.WriteLine($"Student Name : {student.Name}\nLetter Grade : {student.LetterGarde}\nGPA : {student.GPA}\nGrades :");
+
             foreach (var grade in student.Grades)
             {
                 Console.WriteLine(grade);
             }
+        }
+
+        public char GetLetterGrade(double averageGrade)
+        {
+            if (averageGrade >= 90)
+                return 'A';
+            else if (averageGrade >= 80)
+                return 'B';
+            else if (averageGrade >= 70)
+                return 'C';
+            else if (averageGrade >= 60)
+                return 'D';
+            else
+                return 'F';
+        }
+
+        public double GetGPA(char letterGrade)
+        {
+            switch (letterGrade)
+            {
+                case 'A':
+                    return 4;
+                case 'B':
+                    return 3;
+                case 'C':
+                    return 2;
+                case 'D':
+                    return 1;
+                case 'F':
+                    return 0;
+            }
+            return 0;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using GradeBook.Enums;
 
 namespace GradeBoook.Student
@@ -11,12 +12,22 @@ namespace GradeBoook.Student
         public StudentType Type { get; set; }
         public EnrollmentType Enrollment { get; set; }
         public List<double> Grades { get; set; }
-
-        public Student(string name, StudentType studentType, EnrollmentType enrollmentType)
+        public double AverageGarde
         {
-            Name = name;
+            get
+            {
+                return Grades.Average();
+            }
+        }
+        public char LetterGarde { get; set; }
+        public double GPA { get; set; }
+
+        public Student(string studentName, StudentType studentType, EnrollmentType studentEnrollmentType)
+        {
+            Name = studentName;
             Type = studentType;
-            Enrollment = enrollmentType;
+            Enrollment = studentEnrollmentType;
+
             Grades = new List<double>();
         }
 
@@ -34,7 +45,7 @@ namespace GradeBoook.Student
             {
                 Grades.Remove(grade);
 
-                Console.WriteLine($"Removed a score of {grade} from {Name}'s grades");
+                Console.WriteLine($"Removed a grade of {grade} from {Name}'s grades");
             }
             else
             {
