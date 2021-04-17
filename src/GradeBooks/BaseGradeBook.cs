@@ -1,28 +1,20 @@
 using System.Collections.Generic;
 using GradeBook.Enums;
+using GradeBoook.Student;
 
 namespace GradeBook
 {
-    public abstract class BaseGardeBook
+    public class BaseGardeBook
     {
-        private List<double> grades;
-        private string name;
-        
+        public string Name { get; set; }
+
+        public List<Student> Students { get; set; }
+
         public BaseGardeBook(string name)
         {
-            this.name = name;
-            grades = new List<double>();
+            Name = name;
+            Students = new List<Student>();
         }
-
-        public GradeBookType Type
-        {
-            get;
-            set;
-        }
-
-        public abstract char GetLatterGrade(double averageGarde);
-        public abstract void AddGrade(double grade);
-
 
     }
 }

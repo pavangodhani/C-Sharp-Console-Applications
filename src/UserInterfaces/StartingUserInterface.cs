@@ -1,5 +1,4 @@
-﻿using GradeBook.GradeBooks;
-using System;
+﻿using System;
 
 namespace GradeBook.UserInterfaces
 {
@@ -58,7 +57,7 @@ namespace GradeBook.UserInterfaces
 
             var name = parts[1];
 
-            // BaseGardeBook gardeBook = new BaseGardeBook(name);
+            BaseGardeBook gardeBook = new BaseGardeBook(name);
 
         }
     }

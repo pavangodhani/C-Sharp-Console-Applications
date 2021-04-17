@@ -1,5 +1,4 @@
 ﻿using System;
-using GradeBook.GradeBooks;
 using GradeBook.UserInterfaces;
 
 namespace GradeBook
