@@ -5,7 +5,7 @@ using GradeBook.Enums;
 
 namespace GradeBook.Students
 {
-    public class Student
+    public class Student : IComparable<Student>
     {
         public string Name { get; set; }
         public StudentType Type { get; set; }
@@ -50,6 +50,12 @@ namespace GradeBook.Students
             {
                 System.Console.WriteLine($"Garde {grade} is not prasent in {Name}'s grades");
             }
+
+        }
+
+        public int CompareTo(Student obj)
+        {
+            return AverageGrade.CompareTo(obj.AverageGrade);
 
         }
     }

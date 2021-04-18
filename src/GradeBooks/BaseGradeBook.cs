@@ -15,6 +15,8 @@ namespace GradeBook.GradeBooks
 
         public List<Student> Students { get; set; }
 
+        public GradeBookType Type { get; set; }
+
         public BaseGradeBook(string name)
         {
             Name = name;
@@ -89,7 +91,7 @@ namespace GradeBook.GradeBooks
             student.RemoveGrade(grade);
         }
 
-        public void CalculateStudentStatistics(string studentName)
+        public virtual void CalculateStudentStatistics(string studentName)
         {
             var student = Students.FirstOrDefault(e => e.Name == studentName);
 
@@ -112,7 +114,7 @@ namespace GradeBook.GradeBooks
             }
         }
 
-        public char GetLetterGrade(double averageGrade)
+        public virtual char GetLetterGrade(double averageGrade)
         {
             if (averageGrade >= 90)
                 return 'A';
