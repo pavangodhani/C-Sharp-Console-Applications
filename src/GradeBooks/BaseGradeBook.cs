@@ -168,6 +168,9 @@ namespace GradeBook.GradeBooks
             var honorPoints = 0d;
             var dualEnrolledPoints = 0d;
 
+            Students.Sort();
+            Students.Reverse();
+
             foreach (var student in Students)
             {
                 student.LetterGrade = GetLetterGrade(student.AverageGrade);
