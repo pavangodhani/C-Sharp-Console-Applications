@@ -1,0 +1,16 @@
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\NumberGuesser.exe
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\NumberGuesser.deps.json
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\NumberGuesser.runtimeconfig.json
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\NumberGuesser.runtimeconfig.dev.json
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\NumberGuesser.dll
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\ref\NumberGuesser.dll
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\bin\Debug\net5.0\NumberGuesser.pdb
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.csprojAssemblyReference.cache
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.GeneratedMSBuildEditorConfig.editorconfig
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.AssemblyInfoInputs.cache
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.AssemblyInfo.cs
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.csproj.CoreCompileInputs.cache
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.dll
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\ref\NumberGuesser.dll
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.pdb
+E:\KLing\C#\Projects\NumberGuesser\NumberGuesser\obj\Debug\net5.0\NumberGuesser.genruntimeconfig.cache

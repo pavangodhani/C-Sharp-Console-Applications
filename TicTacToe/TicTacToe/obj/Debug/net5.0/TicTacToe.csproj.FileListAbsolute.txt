@@ -1,0 +1,16 @@
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\TicTacToe.exe
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\TicTacToe.deps.json
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\TicTacToe.runtimeconfig.json
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\TicTacToe.runtimeconfig.dev.json
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\TicTacToe.dll
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\ref\TicTacToe.dll
+E:\KLing\Project\TicTacToe\TicTacToe\bin\Debug\net5.0\TicTacToe.pdb
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.csprojAssemblyReference.cache
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.AssemblyInfoInputs.cache
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.AssemblyInfo.cs
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.csproj.CoreCompileInputs.cache
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.dll
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\ref\TicTacToe.dll
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.pdb
+E:\KLing\Project\TicTacToe\TicTacToe\obj\Debug\net5.0\TicTacToe.genruntimeconfig.cache
