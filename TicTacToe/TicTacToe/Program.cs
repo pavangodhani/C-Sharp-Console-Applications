@@ -6,8 +6,8 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            UserInterface.GetAppInfo();
-            GameLogic.gamePlay();
+            GameLogic.GetAppInfo();
+            GameLogic.GamePlay();
         }
     }
 }
